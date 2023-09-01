@@ -6,7 +6,7 @@
 Demo:
 -----
 
-Experience the theme in action by visiting our live demo: [Demo](https://chat.openai.com/link-to-demo)
+Experience the theme in action by visiting our live demo: [Demo](https://stand-blog.pages.dev/)
 
 Features:
 ---------
