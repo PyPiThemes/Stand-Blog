@@ -1,0 +1,41 @@
+<!-- Common meta tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="{{ SITENAME }}">
+<meta name="twitter:creator" content="{{ YOUR_TWITTER_HANDLE }}">
+{% if page %}
+<!-- Page-specific meta tags -->
+<meta name="twitter:title" content="{{ page.title|striptags|escape }}">
+<meta name="twitter:description" content="{{ page.description|striptags|escape }}">
+<meta name="twitter:url" content="{{ SITEURL }}/{{ page.slug }}">
+{% if SITELOGO %}
+<meta name="twitter:image" content="{{ SITEURL }}/theme/images/{{ SITELOGO }}">
+{% endif %}
+{% elif article %}
+<!-- Article-specific meta tags -->
+<meta name="twitter:title" content="{{ article.title|striptags|escape }}">
+<meta name="twitter:description" content="{{ article.description|striptags|escape }}">
+<meta name="twitter:url" content="{{ SITEURL }}/{{ article.url }}">
+{% if article.thumbnail %}
+<meta name="twitter:image" content="{{ SITEURL }}/theme/images/contents/thumbnail/{{ article.thumbnail }}">
+{% elif SITELOGO %}
+<meta name="twitter:image" content="{{ SITEURL }}/theme/images/{{ SITELOGO }}">
+{% endif %}
+{% elif category %}
+<!-- Category-specific meta tags -->
+<meta name="twitter:title" content="Articles in category '{{ category }}'">
+<meta name="twitter:description" content="Articles in the '{{ category }}' category on {{ SITENAME }}">
+<meta name="twitter:url" content="{{ SITEURL }}/{{ category.url }}">
+{% elif tag %}
+<!-- Tag-specific meta tags -->
+<meta name="twitter:title" content="Articles in tag '{{ tag }}'">
+<meta name="twitter:description" content="Articles tagged with '{{ tag }}' on {{ SITENAME }}">
+<meta name="twitter:url" content="{{ SITEURL }}/{{ tag.url }}">
+{% else %}
+<!-- Default meta tags -->
+<meta name="twitter:title" content="{{ SITENAME }}">
+<meta name="twitter:description" content="{{ SITEDESCRIPTION }}">
+<meta name="twitter:url" content="{{ SITEURL }}">
+{% if SITELOGO %}
+<meta name="twitter:image" content="{{ SITEURL }}/theme/images/{{ SITELOGO }}">
+{% endif %}
+{% endif %}

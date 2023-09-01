@@ -1,0 +1,38 @@
+<!-- Common meta tags here -->
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<!-- Include other common meta tags as needed -->
+
+{% if page %}
+<!-- Page-specific meta tags -->
+<meta property="og:title" content="{{ page.title|striptags|escape }}"/>
+<meta property="og:description" content="{{ page.description|striptags|escape }}"/>
+<meta property="og:url" content="{{ SITEURL }}{{ page.url }}">
+<!-- Other OG and Twitter tags specific to pages -->
+{% endif %}
+
+{% if article %}
+<!-- Article-specific meta tags -->
+<meta property="og:title" content="{{ article.title|striptags|escape }}"/>
+<meta property="og:description" content="{{ article.description|striptags|escape }}"/>
+<meta property="og:url" content="{{ SITEURL }}{{ article.url }}">
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="{{ article.date }}">
+<!-- Other OG and Twitter tags specific to articles -->
+{% endif %}
+
+{% if category %}
+<!-- Category-specific meta tags -->
+<meta property="og:title" content="Articles in category '{{ category }}'"/>
+<meta property="og:description" content="Articles in the '{{ category }}' category on {{ SITENAME }}."/>
+<meta property="og:url" content="{{ SITEURL }}{{ category.url }}">
+<!-- Other OG and Twitter tags specific to categories -->
+{% endif %}
+
+{% if tag %}
+<!-- Tag-specific meta tags -->
+<meta property="og:title" content="Articles tagged with '{{ tag }}'"/>
+<meta property="og:description" content="Articles tagged with '{{ tag }}' on {{ SITENAME }}."/>
+<meta property="og:url" content="{{ SITEURL }}{{ tag.url }}">
+<!-- Other OG and Twitter tags specific to tags -->
+{% endif %}

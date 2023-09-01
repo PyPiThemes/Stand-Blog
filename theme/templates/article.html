@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}{{article.title|striptags|escape}}{% endblock %}
+
+{% block content %}
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="heading-page header-text">
+      <section class="page-heading">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="text-content">
+                <h4>Post Details</h4>
+                <h2>Single blog post</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <section class="blog-posts grid-system">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="all-blog-posts">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="blog-post">
+                    <!-- Blog post thumbnail -->
+                    <div class="blog-thumb">
+                      <img src="assets/images/blog-post-02.jpg" alt="">
+                    </div>
+                    <div class="down-content">
+                      <!-- Display category -->
+                      <span>{{article.category}}</span>
+                      <!-- Article title with link to article page -->
+                      <a href="/{{article.slug}}"><h4>{{article.title}}</h4></a>
+                      <!-- Post information -->
+                      <ul class="post-info">
+                        <li><a href="/{{ AUTHOR.url }}">{{ AUTHOR }}</a></li>
+                        <li><a href="#">{{ article.date.strftime('%B %d, %Y') }}</a></li>
+                      </ul>
+
+                      <!-- Article content -->
+                      {{article.content}}
+                      
+                      <div class="post-options">
+                        <div class="row">
+                          <div class="col-6">
+                            <!-- Display article tags -->
+                            <ul class="post-tags">
+                              <li><i class="fa fa-tags"></i></li>
+                              {% for tag in article.tags %}
+                              <li><a href="/{{tag.url}}">{{tag}}</a>,</li>
+                              {% endfor %}
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            {% if article.share_post and article.status != 'draft' %}
+                            <div id="post-share-links">
+                              <!-- Share buttons -->
+                              <ul class="post-share">
+                                <li><i class="fa fa-share-alt"></i></li>
+                                {% if article.share_post['twitter'] %}
+                                <li><a href="{{ article.share_post['twitter'] }}" title="Share on Twitter">Twitter</a></li>
+                                {% endif %}
+                                {% if article.share_post['facebook'] %}
+                                <li><a href="{{ article.share_post['facebook'] }}" title="Share on Facebook">Facebook</a></li>
+                                {% endif %}
+                                {% if article.share_post['linkedin'] %}
+                                <li><a href="{{ article.share_post['linkedin'] }}" title="Share on LinkedIn">LinkedIn</a></li>
+                                {% endif %}
+                                {% if article.share_post['reddit'] %}
+                                <li><a href="{{ article.share_post['reddit'] }}" title="Share via Reddit">Reddit</a></li>
+                                {% endif %}
+                              </ul>
+                            </div>
+                            {% endif %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="sidebar-item submit-comment">
+                    <div class="sidebar-heading">
+                      <h2>Comment</h2>
+                    </div>
+                    <div class="content">
+                      <!-- Include Disqus comments -->
+                      {% include 'partial/disqus.html' %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <!-- Include sidebar content -->
+            {% include 'partial/sidebar.html' %}
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock content %}

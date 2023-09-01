@@ -1,0 +1,40 @@
+{% if DEFAULT_PAGINATION and articles_paginator.num_pages > 0 %}
+  <!-- Pagination -->
+  <ul class="page-numbers">
+    {% if articles_page.has_previous() %}
+      <!-- Previous Page -->
+      <li><a href="/{{ articles_previous_page.url }}"><i class="fa fa-angle-double-left"></i></a></li>
+    {% endif %}
+
+    {% set max_pages = 4 %}
+    {% set half_pages = (max_pages // 2) | int %}
+
+    {% if articles_paginator.num_pages <= max_pages %}
+      <!-- Show All Pages -->
+      {% set page_range = articles_paginator.page_range %}
+    {% elif articles_page.number <= half_pages %}
+      <!-- Show First Pages -->
+      {% set page_range = articles_paginator.page_range[:max_pages] %}
+    {% elif articles_page.number > (articles_paginator.num_pages - half_pages) %}
+      <!-- Show Last Pages -->
+      {% set page_range = articles_paginator.page_range[-max_pages:] %}
+    {% else %}
+      <!-- Show Middle Pages -->
+      {% set page_range = articles_paginator.page_range[articles_page.number - half_pages - 1:articles_page.number + half_pages] %}
+    {% endif %}
+
+    {% for page_number in page_range %}
+      <!-- Page Number Links -->
+      <li class="{% if articles_page.number == page_number %}active{% endif %}">
+        <a href="/{{articles_page.url}}{% if page_number == 1 %}{% else %}page/{{ page_number }}{% endif %}">{{ page_number }}</a>
+      </li>
+    {% endfor %}
+
+    {% if articles_page.has_next() %}
+      <!-- Next Page -->
+      <li><a href="/{{ articles_next_page.url }}"><i class="fa fa-angle-double-right"></i></a></li>
+    {% endif %}
+  </ul>
+{% endif %}
+
+

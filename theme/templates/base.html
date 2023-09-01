@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% if USE_GOOGLE_FONTS != False %}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+    {% endif %}
+    <title>{% block title %}{% endblock %} - {{SITENAME}}</title>
+
+    {% if FAVEICON %}
+    <link rel="icon" href="/theme/assets/images/{{FAVEICON}}" type="image/x-icon">
+    {% endif %}
+
+    <!-- Bootstrap core CSS -->
+    <link href="/theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="/theme/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/theme/assets/css/templatemo-stand-blog.css">
+    <link rel="stylesheet" href="/theme/assets/css/owl.css">
+
+
+
+
+    {% if not PLUGINS or 'seo' not in PLUGINS %}
+    {% if REL_CANONICAL %}
+      {% if page %}
+        <link rel="canonical" href="{{ SITEURL }}/{{ page.url }}">
+      {% elif article %}
+        <link rel="canonical" href="{{ SITEURL }}/{{ article.url }}">
+      {% elif page_name == 'index' and not articles_previous_page %}
+        <link rel="canonical" href="{{ SITEURL }}">
+      {% elif author or category or tag or page_name == 'index' %}
+        <link rel="canonical" href="{{ SITEURL }}/{{ articles_page.url }}">
+      {% else %}
+        <link rel="canonical" href="{{ SITEURL }}/{{ output_file }}">
+      {% endif %}
+    {% endif %}
+  {% endif %} 
+
+
+  <!-- Meta Tags -->
+  {% if page %}
+  <!-- Page-specific meta tags -->
+  <meta name="author" content="{{ AUTHOR }}">
+  <meta name="description" content="{{ page.description|striptags|escape }}">
+  {% elif article %}
+  <!-- Article-specific meta tags -->
+  <meta name="author" content="{{ article.author.name }}">
+  <meta name="description" content="{{ article.description|striptags|escape }}">
+  {% elif category %}
+  <!-- Category-specific meta tags -->
+  <meta name="author" content="{{ AUTHOR }}">
+  <meta name="description" content="Articles in the '{{ category }}' category on {{ SITENAME }}">
+  {% elif tag %}
+  <!-- Tag-specific meta tags -->
+  <meta name="author" content="{{ AUTHOR }}">
+  <meta name="description" content="Articles tagged with '{{ tag }}' on {{ SITENAME }}">
+  {% else %}
+  <!-- Default meta tags -->
+  <meta name="author" content="{{ AUTHOR }}">
+  <meta name="description" content="{{ SITEDESCRIPTION }}">
+  {% endif %}
+   
+  {% if OPEN_GRAPH %}
+  {% include "partial/og-tags.html" %}
+  {% endif %}
+
+  {% if TWITTER_TAGS %}
+     {% include "partial/twitter-tags.html" %}
+  {% endif %}
+
+  {% block custom_meta_tags %}{% endblock %}
+
+  {% block custom_css_code %}{% endblock %}
+
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="/"><h2>{{SITENAME}}<em>.</em></h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" id="home">
+                    <a class="nav-link" href="/">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li> 
+                <li class="nav-item" id="about">
+                    <a class="nav-link" href="/about">About Us</a>
+                </li>
+                <li class="nav-item" id="contact">
+                    <a class="nav-link" href="/contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+      </nav>
+    </header>
+
+
+        <!-- /Content -->
+        {% block content %}{% endblock %}
+
+
+
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <ul class="social-icons">
+                {% for name, link in SOCIAL_MEDIA_LINKS %}
+                {% if link %}
+                <li><a href="{{link}}">{{name}}</a></li>
+                {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="col-lg-12">
+              <div class="copyright-text">
+                <p>Copyright 2020 Stand Blog Co.
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+      <!-- Bootstrap core JavaScript -->
+      <script src="/theme/vendor/jquery/jquery.min.js"></script>
+      <script src="/theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+      <!-- Additional Scripts -->
+      <script src="/theme/assets/js/custom.js"></script>
+      <!-- <script src="/theme/assets/js/slick.js"></script>
+      <script src="/theme/assets/js/isotope.js"></script>
+      <script src="/theme/assets/js/accordions.js"></script> -->
+      {% if HIGHLIGHTER %}
+      <script src="/theme/assets/js/prism.js"></script>
+      {% endif %}
+
+      
+  
+    </body>
+  </html>

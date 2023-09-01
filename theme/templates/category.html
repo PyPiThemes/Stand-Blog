@@ -1,0 +1,6 @@
+{% extends "index.html" %}
+{% block title %} {{category|striptags|escape}} {% endblock %}
+{% block section_title %}
+<h4>Recent Posts in "{{ category }}"</h4>
+<h2>Category: {{ category }}</h2>
+{% endblock %}

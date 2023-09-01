@@ -1,0 +1,7 @@
+User-agent: *               #for all
+
+#Disallow: /page/*
+#Disallow: /category/*/page/*
+#Disallow: /tag/*/page/*
+                        
+Sitemap: https://example.com/sitemap.xml
