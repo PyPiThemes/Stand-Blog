@@ -7,7 +7,7 @@ Date: 2023-08-24
 Modified: 2023-08-24
 Category: web development
 Author: ChatGPT
-Thumbnail: pelican.jpg
+Thumbnail: theme/assets/images/contents/thumbnail/pelican.jpg
 Status: published
 
 Static site generators have revolutionized the way we build and manage websites. Among the various options available, Pelican stands out as a versatile and efficient choice. In this article, we'll delve into what Pelican is, how it works, and why you might consider using it for your next web project.
@@ -28,11 +28,12 @@ Pelican is an open-source static site generator written in Python. It takes your
 
 ## Why Choose Pelican?
 
-### 1. Speed and Performance
+### 1. Speed and Performance  
 Static sites are incredibly fast because they don't involve complex server-side processing. Users experience quicker page load times, leading to better user engagement and search engine ranking.
 
-### 2. Security
+### 2. Security  
 Static sites are inherently more secure since they don't rely on server-side databases or dynamic content generation, reducing the potential attack surface.
+
 
 ### 3. Simplicity
 Pelican's simple setup and content creation process make it a great choice for bloggers, developers, and content creators who want to focus on their content rather than managing a complex backend.

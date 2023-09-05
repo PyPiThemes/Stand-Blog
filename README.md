@@ -22,10 +22,11 @@ Features:
 *   **Scroll to the top button:** Easily navigate back to the top of your page with a single click.
 *   **Modern search form:** Find the posts you want with a modern and intuitive search form.
 *   **Compatible with modern browsers:** Stand Bog is compatible with all modern browsers, so your readers can enjoy your blog regardless of their device.
+*   **Support Meta tags and OpenGraph:** Stand Bog supports Meta tags and OpenGraph and is easy to customize.
 *   **Image lazy loading:** Only load images when visible on the screen, improving performance.
 *   **Image Gallery:** Create beautiful image galleries with ease.
 *   **Author page:** Each author has their own page to showcase their work.
-*   **Custom logo support:** Upload your own logo to give your blog a unique look.
+*   **Custom Icon support:** Upload your own icon to give your blog a unique look.
 *   **Supports video posts:** Easily add videos to your posts.
 *   **Supports multiple authors:** Easily manage multiple authors with Stand Bog.
 *   **Supports contact form (Formspree):** Let your readers easily contact you using a Formspree contact form.

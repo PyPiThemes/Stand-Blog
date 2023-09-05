@@ -2,33 +2,33 @@
 {% block title %} {{page.title}} {% endblock %}
 
 
-  {% block content %}
-    <!-- Page Content -->
+{% block content %}
+<!-- Page Content -->
 
 
-    <!-- Banner Starts Here -->
-    <div class="heading-page header-text">
-      <section class="page-heading">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="text-content">
-                <h4>{{page.title}}</h4>
-                <h2>more {{page.title}}</h2>
-              </div>
-            </div>
+<!-- Banner Starts Here -->
+<div class="heading-page header-text">
+  <section class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="text-content">
+            <h4>{{page.title}}</h4>
+            <h2>more {{page.title}}</h2>
           </div>
         </div>
-      </section>
-    </div>
-    <!-- Banner Ends Here -->
-
-
-    <section class="about-us">
-      <div class="container">
-        {{page.content}}
       </div>
-    </section>
+    </div>
+  </section>
+</div>
+<!-- Banner Ends Here -->
 
-    
-    {% endblock content %}
+
+<section class="about-us">
+  <div class="container">
+    {{page.content}}
+  </div>
+</section>
+
+
+{% endblock content %}

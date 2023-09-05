@@ -4,119 +4,119 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev//</loc>
-<lastmod>2023-09-01T18:07:03-00:00</lastmod>
+<loc>https://stand-blog.pages.dev//</loc>
+<lastmod>2023-09-05T01:08:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev/tags.html</loc>
-<lastmod>2023-09-01T18:07:03-00:00</lastmod>
+<loc>https://stand-blog.pages.dev/tags.html</loc>
+<lastmod>2023-09-05T01:08:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev/categories.html</loc>
-<lastmod>2023-09-01T18:07:03-00:00</lastmod>
+<loc>https://stand-blog.pages.dev/categories.html</loc>
+<lastmod>2023-09-05T01:08:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev/authors.html</loc>
-<lastmod>2023-09-01T18:07:03-00:00</lastmod>
+<loc>https://stand-blog.pages.dev/authors.html</loc>
+<lastmod>2023-09-05T01:08:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev/archives.html</loc>
-<lastmod>2023-09-01T18:07:03-00:00</lastmod>
+<loc>https://stand-blog.pages.dev/archives.html</loc>
+<lastmod>2023-09-05T01:08:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev/contact.html</loc>
-<lastmod>2023-09-01T18:07:03-00:00</lastmod>
+<loc>https://stand-blog.pages.dev/contact.html</loc>
+<lastmod>2023-09-05T01:08:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev/404.html</loc>
-<lastmod>2023-09-01T18:07:03-00:00</lastmod>
+<loc>https://stand-blog.pages.dev/404.html</loc>
+<lastmod>2023-09-05T01:08:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev/about/</loc>
-<lastmod>2023-09-01T18:07:03-00:00</lastmod>
+<loc>https://stand-blog.pages.dev/about/</loc>
+<lastmod>2023-09-05T01:08:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev/exploring-pelican-static-site-generator-in-markdown</loc>
+<loc>https://stand-blog.pages.dev/exploring-pelican-static-site-generator-in-markdown</loc>
 <lastmod>2023-08-24T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev/exploring-pelican-a-static-site-generator-in-html</loc>
+<loc>https://stand-blog.pages.dev/exploring-pelican-a-static-site-generator-in-html</loc>
 <lastmod>2020-12-11T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev/category/python-libraries/</loc>
+<loc>https://stand-blog.pages.dev/category/python-libraries/</loc>
 <lastmod>2020-12-11T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev/category/web-development/</loc>
+<loc>https://stand-blog.pages.dev/category/web-development/</loc>
 <lastmod>2023-08-24T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev/tag/python/</loc>
+<loc>https://stand-blog.pages.dev/tag/python/</loc>
 <lastmod>2023-08-24T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev/tag/pelican/</loc>
+<loc>https://stand-blog.pages.dev/tag/pelican/</loc>
 <lastmod>2023-08-24T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev/tag/elements/</loc>
+<loc>https://stand-blog.pages.dev/tag/elements/</loc>
 <lastmod>2020-12-11T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev/author/chatgpt/</loc>
+<loc>https://stand-blog.pages.dev/author/chatgpt/</loc>
 <lastmod>2023-08-24T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://stand-blog-blog-pelican-theme.pages.dev/author/sd-py/</loc>
+<loc>https://stand-blog.pages.dev/author/sd-py/</loc>
 <lastmod>2020-12-11T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
